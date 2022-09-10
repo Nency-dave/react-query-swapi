@@ -8,7 +8,7 @@ const fetchSpecies = async (pageNumber) => {
 
 export const Species = () => {
   const [pageNumber, setPageNumber] = useState(1);
-  const { data, isLoading, isFetching, error, isError } = useQuery(
+  const { data, isLoading, error, isError } = useQuery(
     ["Species", pageNumber],
     () => fetchSpecies(pageNumber),
     {

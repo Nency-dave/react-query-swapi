@@ -5,7 +5,6 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import { useState } from "react";
 import { QueryClientProvider, QueryClient } from "react-query";
 import { ReactQueryDevtools } from "react-query/devtools";
-import { Planets } from "./components/Planets";
 
 const queryClient = new QueryClient();
 
@@ -36,11 +35,11 @@ function App() {
           <Routes>
             <Route
               path="/"
-              element={page == "vehicles" ? <Vehicles /> : <Species />}
+              element={page === "vehicles" ? <Vehicles /> : <Species />}
             ></Route>
             <Route
               path="/other"
-              element={page == "vehicles" ? <Vehicles /> : <Species />}
+              element={page === "vehicles" ? <Vehicles /> : <Species />}
             ></Route>
           </Routes>
         </Router>
